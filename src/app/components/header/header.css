@@ -1,0 +1,15 @@
+/* div{
+    background-color: #F6C866;   
+} */
+
+.header{
+    margin-bottom: 20px;
+    background-color:#F6C866 !important;
+}
+
+.navbar{
+    background-color:#F6C866 !important;
+    padding:0px;
+    border:1px solid #b05a0d;
+    margin: 0px;
+}

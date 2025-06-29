@@ -1,0 +1,10 @@
+/* background: #F6C866 url(//themes.googleusercontent.com/image?id=0BwVBOzw_-hbMZTMyNTdkZjMtZTI3NS00ZWVjLTk1MTQtMzQ4NmEyMmRlYTE3) no-repeat fixed top center 
+Credit: nicodemos (http://www.istockphoto.com/file_closeup.php?id=4157951&platform=blogger) */
+
+.bck{
+    background-image: url("../../public/backgroundImage.jpg")
+}
+
+.nobck{
+    background-image: none;
+}
