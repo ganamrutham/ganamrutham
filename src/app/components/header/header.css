@@ -3,8 +3,12 @@
 } */
 
 .header{
-    margin-bottom: 20px;
+    margin-bottom: 0px !important;
     background-color:#F6C866 !important;
+}
+
+h1{
+    margin-bottom: 0px !important;
 }
 
 .navbar{
