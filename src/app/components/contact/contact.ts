@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { error } from 'console';
 
 @Component({
   selector: 'app-contact',
@@ -28,13 +29,14 @@ export class Contact implements OnInit {
 
   saveData(data:any){
     console.log(data)
-    this.http.post('https://ganamruthamserver-b2rc.vercel.app/sendemail', data).subscribe(response => {
+    // let contact = {
+    //   name: this.contactForm.get('name'),
+    //   email: this.contactForm.get('email'),
+    //   message: this.contactForm.get('message')
+    // }
+
+    this.http.post('https://localhost:3000/sendemail', data).subscribe(response => {
       console.log(response)
-      this.contactForm = new FormGroup({
-        name: new FormControl('', [Validators.required, Validators.maxLength(20), Validators.minLength(2)]),
-        email: new FormControl('', [Validators.required, Validators.email]),
-        message: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.minLength(2)])
-      })
     })
   }
 
