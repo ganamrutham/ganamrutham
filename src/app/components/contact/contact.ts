@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { error } from 'console';
@@ -35,7 +35,11 @@ export class Contact implements OnInit {
     //   message: this.contactForm.get('message')
     // }
 
-    this.http.post('https://localhost:3000/sendemail', data).subscribe(response => {
+    this.http.post('https://localhost:3000/sendemail', data, {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }).subscribe(response => {
       console.log(response)
     })
   }
