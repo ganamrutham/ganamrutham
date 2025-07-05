@@ -35,7 +35,7 @@ export class Contact implements OnInit {
     //   message: this.contactForm.get('message')
     // }
 
-    this.http.post('https://localhost:3000/sendemail', data, {
+    this.http.post('https://ganamruthamserver-b2rc.vercel.app/sendemail', data, {
       headers: new HttpHeaders({
         'Content-type': 'application/json'
       })
