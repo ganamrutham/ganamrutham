@@ -41,6 +41,7 @@ export class Contact implements OnInit {
       })
     }).subscribe(response => {
       console.log(response)
+      this.contactForm.reset();
     })
   }
 
