@@ -39,10 +39,10 @@ export class Contact implements OnInit {
       headers: new HttpHeaders({
         'Content-type': 'application/json'
       })
-    }).subscribe(response => {
-      console.log(response)
-      this.contactForm.reset();
-    })
+    }).subscribe(
+      response => {console.log(response); this.contactForm.reset();},
+      error => {this.contactForm.reset();}
+    )
   }
 
   get getname(){
