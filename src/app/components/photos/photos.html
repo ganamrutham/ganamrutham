@@ -2,6 +2,26 @@
     <div class="alignleft">
         <h6>Photos</h6>
     </div>
-    <img src="photos1.jpg" class="img-fluid" alt="..." width="500px">
-    <img src="photos2.jpg" class="img-fluid" alt="..." width="500px">
+    <!-- <img src="folder1/0-1.jpg" class="img-fluid" alt="..." width="500px"> -->
+    <!-- <img src="photos1.jpg" class="img-fluid" alt="..." width="500px">
+    <img src="photos2.jpg" class="img-fluid" alt="..." width="500px"> -->
+    <button *ngIf="showPhotos" type="button" class="btn btn-primary alignleft"><a class="nav-link" href='/photos'>Back to Albums</a></button>
+
+    <div class="d-flex flex-row mb-3" *ngIf="!showPhotos">
+    <div class="alignleft p-2" *ngFor="let item of photosGallery; index as i; let odd = odd; let even = even;">
+        <div (click)="folderClicked(item.foldername, i)">
+            <i class="bi bi-folder img-thumbnail" style="font-size: 60px;" ></i><br/>
+            <span>{{item?.foldername}}</span>
+        </div>
+    </div>
+    </div>
+
+    <div *ngIf="showPhotos">
+    <div>
+        <img [src]="this.image" class="img-fluid" alt="..." width="100%">
+    </div>
+    <div *ngFor="let item of folderPhotos[0]?.images; index as i; let odd = odd; let even = even; let first = first; let last = last;">
+        <img class="imgThumbnail" (click)="imageClicked(i)" src={{item}} height="200" width="200" class="img-thumbnail" [class.float-start] = "odd" [class.float-end] = "even" alt="...">
+    </div>
+    </div>
 </div>

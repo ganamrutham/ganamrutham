@@ -1,3 +1,15 @@
 /* .photo1{
     background-image: url(../../assets/photos1.jpg);
 } */
+
+/* .imgThumbnail{
+    width:200px;
+    height:200px;
+}
+
+@media (min-width:480px){
+    .imgThumbnail{
+        width:150px;
+        height:200px;
+    } 
+} */
