@@ -21,7 +21,7 @@
         <img [src]="this.image" class="img-fluid" alt="..." width="100%">
     </div>
     <div *ngFor="let item of folderPhotos[0]?.images; index as i; let odd = odd; let even = even; let first = first; let last = last;">
-        <img class="imgThumbnail" (click)="imageClicked(i)" src={{item}} height="200" width="200" class="img-thumbnail" [class.float-start] = "odd" [class.float-end] = "even" alt="...">
+        <img class="imgThumbnail" (click)="imageClicked(i)" src={{item}} height="200" width="150" class="img-thumbnail" [class.float-start] = "odd" [class.float-end] = "even" alt="...">
     </div>
     </div>
 </div>
