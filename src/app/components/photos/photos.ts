@@ -19,11 +19,11 @@ export class Photos {
   ngOnInit(){
     this.photosGallery = [
     {
-    foldername: 'Eluru event',
+    foldername: 'Appala bala ratnam photos',
     images: ['folder1/0-1.jpg','folder1/0-2.jpg','folder1/0-3.jpg','folder1/0-4.jpg','folder1/0-5.jpg','folder1/0-6.jpg'],
     },
     {
-      foldername: 'General',
+      foldername: 'Book photos',
       images: ['photos1.jpg', 'photos2.jpg', 'photos3.jpg', 'photos4.jpg', 'photos5.jpg'],
     },
   ]
